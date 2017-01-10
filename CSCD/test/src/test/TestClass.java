@@ -6,6 +6,6 @@ public class TestClass
 	{
 		System.out.println("pls work github pls");
 		
-		System.out.println("help");
+		System.out.println("suh dude");
 	}
 }
