@@ -8,7 +8,7 @@ public class TestClass
 		
 		System.out.println("suh dude");
 		
-		System.out.println("this line was written from x9");
+		System.out.println("this line was written from desktop");
 		
 		System.out.println("dude suh");
 	}
