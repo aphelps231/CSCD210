@@ -79,9 +79,7 @@ public class Track
 	public static double round(double num)
 	{
 		int a = (int) (num * 100.0);
-		double x = (double) (a / 100.0);
-
-		//System.out.println(num + " : " + a + " : " + x);
+		double x = (double) (a / 100);
 		
 		return num - x >= .005 ? x + .01 : x;
 	}
