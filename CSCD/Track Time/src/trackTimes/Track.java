@@ -7,7 +7,7 @@ public class Track
 	static double mps = 1.0, fps = 3.28084, kph = 3.6, mph = 2.23694, yps = 1.09361;
 
 	static String[] messages = new String[]
-	{ " meters per second,", " feet per second,", " kilometers per hour,", " miles per hour," };
+	{ " meters per second,", " feet per second,", " kilometers per hour,", " miles pehir hour," };
 
 	static Scanner s;
 
