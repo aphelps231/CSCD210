@@ -1,5 +1,6 @@
 package trackTimes;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Track
@@ -48,6 +49,15 @@ public class Track
 		seconds = round(times[1]);
 		
 		System.out.println("It would take " + seconds + " seconds for the person to run one hundred yards.");
+		
+		System.out.println("\nWould you like to start over? Y/N");
+		
+		String in = s.nextLine();
+		
+		if(in.contains("Y") || in.contains("y"))
+		{
+			runProgram();
+		}
 	}
 
 	public static double[] runVelocityConversions(double time)
@@ -57,9 +67,11 @@ public class Track
 		double[] times = new double[]
 		{ mps * metersPerSecond, fps * metersPerSecond, kph * metersPerSecond, mph * metersPerSecond };
 
+		DecimalFormat df = new DecimalFormat("#.00");
+		
 		for (int i = 0; i < times.length; i++)
 		{
-			times[i] = round(times[i]);
+			times[i] = Double.parseDouble(df.format(round(times[i])));
 		}
 
 		return times;
@@ -78,7 +90,7 @@ public class Track
 
 	public static double round(double num)
 	{
-		int a = (int) (num * 100.0);
+		double a = (int) (num * 100.0);
 		double x = (double) (a / 100);
 		
 		return num - x >= .005 ? x + .01 : x;
