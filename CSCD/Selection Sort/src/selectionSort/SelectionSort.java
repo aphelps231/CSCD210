@@ -6,7 +6,7 @@ public class SelectionSort
 {
 	public static void main(String[] args)
 	{
-		int[] arr = { 2, 8, 1, 5, 6 };
+		int[] arr = { 2, 8, 0, 5, 6 };
 		String[] arr2 = { "my", "name", "is", "Andrew" };
 		
 		selectionSort(arr);
