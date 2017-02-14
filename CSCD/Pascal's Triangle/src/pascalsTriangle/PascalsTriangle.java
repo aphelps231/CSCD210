@@ -4,11 +4,13 @@ public class PascalsTriangle
 {
 	public static void main(String[] args)
 	{
-		printTriangle(fillTriangle(7));
+		printTriangle(fillTriangle(15));
 	}
 	
 	public static int[][] fillTriangle(int a)
 	{
+		a -= ((a - 1) % 2);
+		
 		int triangle[][] = new int[a][a * 2];
 		
 		for(int i = 0; i < triangle.length; i++)
@@ -51,30 +53,34 @@ public class PascalsTriangle
 	
 	public static void printTriangle(int[][] triangle)
 	{
+		boolean inTriangle = false;
+		
 		for(int i = 0; i < triangle.length; i++)
 		{
+			inTriangle = false;
+			
 			for(int j = 0; j < triangle[i].length; j++)
 			{
-				if(triangle[i][j] == 0)
+				if(triangle[i][j] == 1)
 				{
-					System.out.print(" ");
+					inTriangle = true;
 				}
 				
-				if(j > 1)
+				if(inTriangle && triangle[i][j] == 0)
 				{
-					if(triangle[i][j - 1] < 10)
-					{
-						System.out.print("");
-					}
+					System.out.print("\t\t");
 				}
-				
-				if(triangle[i][j] != 0)
+				else if(triangle[i][j] == 0 && j != 0)
+				{
+					System.out.print("\t");
+				}
+				else if(j != 0)
 				{
 					System.out.print(triangle[i][j]);
 				}
 			}
 			
-			System.out.println();
+			System.out.println("\n\n");
 		}
 	}
 }
