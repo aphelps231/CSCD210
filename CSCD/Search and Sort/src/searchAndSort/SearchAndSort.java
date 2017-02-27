@@ -45,8 +45,18 @@ public class SearchAndSort
 		}
 	}
 	
-	public static void linearSearch(Comparable[] array)
+	public static int linearSearch(Comparable[] array, String target)
 	{
+		int index = -1;
 		
+		for(int i = 0; i < array.length; i++)
+		{
+			if(array[i].toString().contains(target))
+			{
+				index = i;
+			}
+		}
+		
+		return index;
 	}
 }
