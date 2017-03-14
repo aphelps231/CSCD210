@@ -1,6 +1,6 @@
 package pascalsTriangle;
 
-public class PascalsTriangle
+public class PascalTester
 {
 	public static void main(String[] args)
 	{
