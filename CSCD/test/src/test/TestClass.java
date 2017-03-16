@@ -6,15 +6,7 @@ public class TestClass
 {
 	public static void main(String[] args)
 	{
-		System.out.println(Arrays.toString(splitInteger(123456789)));
-		
-		int n = 123;
-		
-		while(n > 0)
-		{
-			System.out.println(n % 10);
-			n /= 10;
-		}
+		FinalNotes f = new FinalNotes();
 	}
 	
 	public static int[] splitInteger(int input)
